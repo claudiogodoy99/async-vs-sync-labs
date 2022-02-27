@@ -1,0 +1,47 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 2 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\claudiogodoy\source\repos\SyncVsAsync\SyncVsAsync\bin\Release\net6.0\42f95d76-7fe7-4e64-8289-2c61dcf7819f
+// command took 4,87s and exited with 0
+// start dotnet build -c Release  --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\claudiogodoy\source\repos\SyncVsAsync\SyncVsAsync\bin\Release\net6.0\42f95d76-7fe7-4e64-8289-2c61dcf7819f
+// command took 17,17s and exited with 1
+// start dotnet build -c Release  --no-restore --no-dependencies /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\claudiogodoy\source\repos\SyncVsAsync\SyncVsAsync\bin\Release\net6.0\42f95d76-7fe7-4e64-8289-2c61dcf7819f
+// command took 7,24s and exited with 0
+// ***** Done, took 00:00:36 (36.67 sec)   *****
+// Found 2 benchmarks:
+//   Lab.Sincrono: DefaultJob
+//   Lab.Assincrono: DefaultJob
+
+// **************************
+// Benchmark: Lab.Sincrono: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "42f95d76-7fe7-4e64-8289-2c61dcf7819f.dll" --benchmarkName "SyncVsAsync.Lab.Sincrono" --job "Default" --benchmarkId 0 in C:\Users\claudiogodoy\source\repos\SyncVsAsync\SyncVsAsync\bin\Release\net6.0\42f95d76-7fe7-4e64-8289-2c61dcf7819f\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 6.0.2 (6.0.222.6406), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 794300.00 ns, 794.3000 us/op
+WorkloadJitting  1: 1 op, 10004200.00 ns, 10.0042 ms/op
+
+OverheadJitting  2: 16 op, 601400.00 ns, 37.5875 us/op
+WorkloadJitting  2: 16 op, 740800.00 ns, 46.3000 us/op
+
+WorkloadPilot    1: 16 op, 239400.00 ns, 14.9625 us/op
+WorkloadPilot    2: 32 op, 799700.00 ns, 24.9906 us/op
+WorkloadPilot    3: 64 op, 849800.00 ns, 13.2781 us/op
+WorkloadPilot    4: 128 op, 1723300.00 ns, 13.4633 us/op
+WorkloadPilot    5: 256 op, 3921800.00 ns, 15.3195 us/op
+WorkloadPilot    6: 512 op, 6989500.00 ns, 13.6514 us/op
+WorkloadPilot    7: 1024 op, 10939000.00 ns, 10.6826 us/op
+WorkloadPilot    8: 2048 op, 29088000.00 ns, 14.2031 us/op
+WorkloadPilot    9: 4096 op, 81814400.00 ns, 19.9742 us/op
+WorkloadPilot   10: 8192 op, 183324300.00 ns, 22.3785 us/op
+WorkloadPilot   11: 16384 op, 297731400.00 ns, 18.1721 us/op
+WorkloadPilot   12: 32768 op, 493850500.00 ns, 15.0711 us/op
+WorkloadPilot   13: 65536 op, 1546409800.00 ns, 23.5963 us/op
+
